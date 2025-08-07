@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Sansation", sans-serif;
+}
+
+body {
+  font-size: 20px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  z-index: 4;
+  background: linear-gradient(180deg, #000000, #00000000);
+}
+nav {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+}
+
+ul li a {
+  color: #ffffff;
+  font-weight: 800;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 300ms ease-in-out;
+}
+ul li a:hover {
+  border: 1px solid #01045e;
+  background: #ffffff48;
+}
+
+header nav .btn-login {
+  background: #01045e;
+  border: 1px solid #01045e8c;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 3px;
+  border: 2px solid #01045e;
+  transition: all 300ms ease-in-out;
+}
+header nav .btn-login:hover {
+  background: #000593;
+  border: 1px solid #ffffff;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -50px;
+  overflow: hidden;
+}
+
+.container .list .list-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.container .list .list-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+}
+
+.container .list .list-item .content {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  padding-right: 30%;
+  width: 80%;
+  color: #ffffff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.598);
+}
+.container .list .list-item .content h2 {
+  text-transform: capitalize;
+  font-size: 40px;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.container .list .list-item .content p {
+  margin: 20px 0;
+}
+
+.container .list .list-item .content .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.container .list .list-item .content .buttons button {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 900;
+  transition: all 300ms ease-in-out;
+  letter-spacing: 3px;
+  border: #ffffff;
+  border-radius: 5px;
+}
+.container .list .list-item .content .buttons button:nth-child(2) {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.container .list .list-item .content .buttons button:hover {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.container .list .list-item .content .buttons button:nth-child(2):hover {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: #000000;
+}
+
+.container .thumb {
+  position: absolute;
+  bottom: 50px;
+  left: 52%;
+  display: flex;
+  gap: 20px;
+  flex-direction: row-reverse;
+}
+
+.container .thumb .thumb-item {
+  width: 135px;
+  height: 200px;
+  position: relative;
+  z-index: 4;
+}
+
+.container .thumb .thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(80%);
+}
+
+.container .thumb .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.container .thumb .content h3 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.container .thumb .content button {
+  font-size: 10px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: #000000;
+  font-weight: 900;
+  transition: all 300ms ease-in-out;
+  letter-spacing: 3px;
+  border: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.container .thumb .content button:hover {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.container .arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 50px;
+  left: 120px;
+  width: 300px;
+}
+
+.container .arrows button {
+  background-color: #01045e8c;
+  border: 1px solid #01045e8c;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 5px 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 900;
+  transition: all 300ms ease-in-out;
+}
+
+.container .arrows button:hover {
+  background: #000593;
+  border: 1px solid #ffffff;
+}
+
+/* Movimeneto da thumb*/
+
+.container.next .thumb {
+  /* name duration timing-function delay iteration-count direction fill-mode */
+
+  animation: effectNextThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectNextThumb {
+  from {
+    transform: translateX(150px);
+  }
+}
+
+/* Movimento ultima thumb*/
+
+.container.next .thumb .thumb-item:nth-child(5) {
+  animation: effectLastThumb 0.5s linear 1 forwards;
+  transform: scale(100%);
+}
+
+@keyframes effectLastThumb {
+  from {
+    width: -150px;
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Animação do texto */
+
+.container .list .list-item:nth-child(5) .content h2,
+.container .list .list-item:nth-child(5) .content p,
+.container .list .list-item:nth-child(5) .content .buttons {
+  transform: translateX(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+  to {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.container .list .list-item:nth-child(5) .content h2 {
+  animation-delay: 0.7s;
+}
+
+.container .list .list-item:nth-child(5) .content p {
+  animation-delay: 0.9s;
+}
+.container .list .list-item:nth-child(5) .content .buttons {
+  animation-delay: 1.1s;
+}
+
+.container.next .list .list-item:nth-child(5) img {
+  width: 135px;
+  height: 200px;
+  position: absolute;
+  bottom: 50px;
+  left: 52%;
+  border-radius: 10px;
+  animation: showMainImage 0.5s linear 1 forwards;
+}
+
+@keyframes showMainImage {
+  to {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.container.prev .list .list-item:nth-child(4) img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: hideMainImage 0.5s linear 1 forwards;
+  z-index: 2;
+  opacity: 1;
+}
+
+@keyframes hideMainImage {
+  to {
+    width: 135px;
+    height: 200px;
+    bottom: 50px;
+    left: 52%;
+    border-radius: 10px;
+    opacity: 0;
+  }
+}
