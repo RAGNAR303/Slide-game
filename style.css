@@ -33,6 +33,16 @@ nav {
   align-items: center;
 }
 
+nav p {
+  color: #ffffff;
+  background: linear-gradient(180deg, #000593, #01045e);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+nav i {
+  margin-right: 2px;
+}
+
 ul {
   display: flex;
   gap: 40px;
@@ -47,19 +57,18 @@ ul li a {
   transition: all 300ms ease-in-out;
 }
 ul li a:hover {
-  border: 1px solid #01045e;
-  background: #ffffff48;
+  color: #01045e;
+  text-shadow: 1px 1px 0 #ffffff;
 }
 
 header nav .btn-login {
-  background: #01045e;
+  background: linear-gradient(180deg, #000593, #01045e);
   border: 1px solid #01045e8c;
   padding: 10px 20px;
   border-radius: 10px;
   color: #ffffff;
   font-weight: 800;
   letter-spacing: 3px;
-  border: 2px solid #01045e;
   transition: all 300ms ease-in-out;
 }
 header nav .btn-login:hover {
@@ -98,8 +107,12 @@ header nav .btn-login:hover {
 }
 .container .list .list-item .content h2 {
   text-transform: capitalize;
-  font-size: 40px;
-  text-shadow: 0 5px 10px #0004;
+  font-size: 50px;
+  background: linear-gradient(90deg, #000593, #01045e);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 900;
 }
 
 .container .list .list-item .content p {
@@ -116,7 +129,7 @@ header nav .btn-login:hover {
 
 .container .list .list-item .content .buttons button {
   background: #ffffff;
-  color: #000000;
+  color: #01045e;
   font-weight: 900;
   transition: all 300ms ease-in-out;
   letter-spacing: 3px;
@@ -163,6 +176,7 @@ header nav .btn-login:hover {
   object-fit: cover;
   border-radius: 10px;
   filter: brightness(80%);
+  box-shadow: 0 2px 2px #000000;
 }
 
 .container .thumb .content {
@@ -175,19 +189,21 @@ header nav .btn-login:hover {
   font-size: 15px;
   color: #ffffff;
   text-transform: uppercase;
+  text-shadow: 0 2px 2px #000000;
 }
 
 .container .thumb .content button {
   font-size: 10px;
   background: #ffffff;
   border: 1px solid #ffffff;
-  color: #000000;
+  color: #01045e;
   font-weight: 900;
   transition: all 300ms ease-in-out;
   letter-spacing: 3px;
   border: #ffffff;
   border-radius: 5px;
   padding: 5px 10px;
+  line-height: 3px;
 }
 
 .container .thumb .content button:hover {
@@ -207,7 +223,7 @@ header nav .btn-login:hover {
 }
 
 .container .arrows button {
-  background-color: #01045e8c;
+  background: linear-gradient(180deg, #000593, #01045e);
   border: 1px solid #01045e8c;
   border-radius: 10px;
   font-size: 2rem;
